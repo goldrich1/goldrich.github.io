@@ -1,0 +1,287 @@
+# Generate the complete, modern, responsive website as requested
+html_content = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Health & Wealth Freedom | Nigeria</title>
+    <meta name="description" content="Join a global health & wellness business in Nigeria. Earn extra income while living healthier. Free presentations in Lagos, Abuja, PH, Owerri, Jos & more!">
+    <style>
+        /* Modern, clean, mobile-first CSS */
+        :root {
+            --primary: #2ecc71;
+            --secondary: #f39c12;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --text: #34495e;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), #1abc9c);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background: url('https://images.unsplash.com/photo-1571019613454-1cb2d0b5c8a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            position: relative;
+        }
+        .hero::before {
+            content: '';            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.6);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .btn:hover {
+            background: #e67e22;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+        .section {
+            padding: 70px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--dark);
+            font-size: 2.2rem;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        .feature-card {
+            background: white;            padding: 30px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 350px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        .feature-card h3 {
+            color: var(--primary);
+            margin: 15px 0;
+        }
+        .cities {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .city-tag {
+            background: var(--primary);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+        .testimonials {
+            background: var(--dark);
+            color: white;
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .testimonial {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        .form-section {
+            background: white;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;            background: var(--light);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        input, select {
+            width: 100%;
+            padding: 14px;
+            margin: 12px 0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .section { padding: 50px 0; }
+            form { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h2>🌍 Global Health & Wellness | Nigeria</h2>
+            <p>Earn Extra Income • Live Healthier • Achieve Financial Freedom</p>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Health + Wealth = True Freedom</h1>
+            <p>Join thousands of Nigerians improving their health and earning weekly income through a trusted global wellness brand.</p>
+            <a href="#register" class="btn">Reserve My Free Seat Now!</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">We’re Hosting Free Presentations Across Nigeria!</h2>
+            <div class="cities">                <span class="city-tag">Lagos</span>
+                <span class="city-tag">Abuja</span>
+                <span class="city-tag">Port Harcourt</span>
+                <span class="city-tag">Owerri</span>
+                <span class="city-tag">Jos</span>
+                <span class="city-tag">Minna</span>
+                <span class="city-tag">+ More Cities</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section testimonials">
+        <div class="container">
+            <h2 class="section-title" style="color:white;">Real Stories. Real Results.</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p>“I was a student struggling to pay for textbooks. In 6 weeks, I earned ₦180,000 — enough to cover my semester fees AND buy supplements for my family.”</p>
+                    <strong>— Chioma, 22, Lagos</strong>
+                </div>
+                <div class="testimonial">
+                    <p>“At 63, I thought retirement meant slowing down. Now I earn ₦90,000/month part-time while feeling more energetic than I have in years!”</p>
+                    <strong>— Mr. Bello, 63, Abuja</strong>
+                </div>
+                <div class="testimonial">
+                    <p>“No experience? No problem. I started with zero network. Today, I lead a team of 15 across 3 states.”</p>
+                    <strong>— Tunde, 29, Port Harcourt</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section form-section" id="register">
+        <div class="container">
+            <h2 class="section-title">Secure Your Free Seat Today!</h2>
+            <form action="YOUR_GOOGLE_FORM_LINK" method="POST">
+                <input type="text" name="entry.YOUR_NAME_FIELD" placeholder="Full Name" required />
+                <input type="email" name="entry.YOUR_EMAIL_FIELD" placeholder="Email Address" />
+                <input type="tel" name="entry.YOUR_PHONE_FIELD" placeholder="Phone Number (e.g., 08031234567)" required />
+                
+                <select name="entry.YOUR_LOCATION_FIELD" required>
+                    <option value="">Select Your City</option>
+                    <option value="Lagos">Lagos</option>
+                    <option value="Abuja">Abuja</option>
+                    <option value="Port Harcourt">Port Harcourt</option>
+                    <option value="Owerri">Owerri</option>
+                    <option value="Jos">Jos</option>
+                    <option value="Minna">Minna</option>
+                    <option value="Other">Other</option>
+                </select>
+                                <select name="entry.YOUR_ATTENDANCE_FIELD" required>
+                    <option value="">How would you like to attend?</option>
+                    <option value="Online (Zoom)">Online (Zoom)</option>
+                    <option value="In-Person">In-Person</option>
+                </select>
+                
+                <button type="submit" class="btn">Submit & Reserve My Seat</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Global Health & Wellness Nigeria. All rights reserved.</p>
+            <p style="margin-top:10px;">
+                <a href="https://wa.me/2348035898092?text=Hi%20I%E2%80%99m%20interested%20in%20the%20wellness%20presentation" 
+                   style="color:#2ecc71; text-decoration:underline;" target="_blank">
+                    Contact Us on WhatsApp
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/2348035898092?text=Hi%20I%E2%80%99m%20interested%20in%20the%20wellness%20presentation" 
+       target="_blank"
+       style="position:fixed; bottom:20px; right:20px; z-index:1000;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+             alt="Chat on WhatsApp" 
+             width="60" 
+             style="border-radius:50%; box-shadow: 0 4px 12px rgba(0,0,0,0.3);" />
+    </a>
+</body>
+</html>
+"""
+
+# Save the HTML file
+with open("index.html", "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+# Return success message
+"✅ Your website 'index.html' has been generated successfully! You can now download it and host it anywhere."
