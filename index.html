@@ -235,16 +235,47 @@ html_content = """
                 </div>
             </div>
         </div>
-    </section>
+    </section><!-- Countdown Timer -->
+<div id="countdown-container" style="text-align: center; margin: 20px 0; background: #e8f5e9; padding: 15px; border-radius: 10px; display: none;">
+  <h3 style="color: #2e7d32; margin-bottom: 10px;">⏰ Next Presentation Starts In:</h3>
+  <div id="countdown" style="font-size: 24px; font-weight: bold; color: #d32f2f;"></div>
+</div>
 
-    <section class="section form-section" id="register">
-        <div class="container">
-            <p>Complete this form to register for presentation and mentorship.</p>
+<script>
+  // Set your event date & time (Nigeria Time = WAT = UTC+1)
+  const eventDate = new Date('2026-02-07T15:00:00+01:00').getTime();
+
+  const countdownContainer = document.getElementById('countdown-container');
+  const countdownDisplay = document.getElementById('countdown');
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    if (distance > 0) {
+      countdownContainer.style.display = 'block';
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownDisplay.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    } else {
+      countdownContainer.style.display = 'none';
+      // Optional: Show "Event Live!" message after time passes
+    }
+  }
+
+  // Update every second
+  setInterval(updateCountdown, 1000);
+  updateCountdown(); // Initial call
+</script>
+            
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGEUjxU1RDRQXO9XpWAjfvbP7wkG2Wdw3dooSqgBRJAYIqGw/viewform" 
          target="_blank" 
          class="btn" 
          style="margin-top: 1.5rem; background: white; color: var(--primary-green);">
-               <div style="text-align: center;">Register Now → </div> 
+               <div style="text-align: center;">Register Now</div> 
   
       </a>
     </div>
