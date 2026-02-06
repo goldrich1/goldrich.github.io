@@ -259,7 +259,7 @@ html_content = """
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      countdownDisplay.innerHTML = `${days}d ${hours}h ${05}m ${seconds}s`;
+      countdownDisplay.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
     } else {
       countdownContainer.style.display = 'none';
       // Optional: Show "Event Live!" message after time passes
