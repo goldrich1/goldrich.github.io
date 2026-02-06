@@ -259,7 +259,7 @@ html_content = """
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      countdownDisplay.innerHTML = `${10}d ${hours}h ${minutes}m ${seconds}s`;
+      countdownDisplay.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
     } else {
       countdownContainer.style.display = 'none';
       // Optional: Show "Event Live!" message after time passes
@@ -275,7 +275,13 @@ html_content = """
          target="_blank" 
          class="btn" 
          style="margin-top: 1.5rem; background: golden; color: var(--primary-green);">
-               <div style="text-align: center;">Register Now</div> 
+               <div style="text-align: center; margin: 2rem 0;">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGEUjxU1RDRQXO9XpWAjfvbP7wkG2Wdw3dooSqgBRJAYIqGw/viewform" 
+     target="_blank"
+     style="display: inline-block; padding: 12px 32px; background: #2E8B57; color: white; text-decoration: none; border-radius: 50px; font-weight: bold;">
+    Register Now
+  </a>
+</div>
   
       </a>
     </div>
